@@ -1,0 +1,424 @@
+//Chiong
+
+/*
+========================================
+  FINQUEST Global Styles (NEW Green Theme)
+========================================
+*/
+
+/* --- Base --- */
+.root {
+    -fx-font-family: "Inter", "System";
+}
+.main-view {
+    -fx-background-color: #ECF0F1; /* Light gray background */
+}
+
+/* ========================================
+  NEW Light Sidebar (Formal & Minimal)
+========================================
+*/
+.sidebar {
+    -fx-background-color: #FFFFFF; /* NEW: White sidebar */
+    -fx-border-color: transparent #E0E0E0 transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+.sidebar-title {
+    -fx-text-fill: #1E4620; /* Dark Green */
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+.sidebar-subtitle {
+    -fx-text-fill: #7F8C8D; /* Muted Gray */
+    -fx-font-size: 12px;
+}
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2C3E50; /* Dark text */
+    -fx-font-size: 14px;
+    -fx-padding: 12 15 12 20;
+    -fx-alignment: center-left;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent transparent transparent transparent;
+    -fx-border-width: 0 0 0 4;
+    -fx-min-width: 160;
+    -fx-cursor: hand;
+}
+.sidebar-button:hover {
+    -fx-background-color: #ECF0F1; /* Light gray bg */
+    -fx-text-fill: #1E4620; /* Dark Green text */
+}
+.sidebar-button:focused {
+    -fx-background-color: #ECF0F1;
+    -fx-text-fill: #1E4620;
+    -fx-border-color: transparent transparent transparent #2ECC71; /* Bright green accent border */
+}
+
+/* --- NEW: Style for the sidebar icons --- */
+.sidebar-icon {
+    -fx-fill: #2C3E50; /* Match button text color */
+    -fx-scale-x: 0.85;
+    -fx-scale-y: 0.85;
+}
+.sidebar-button:hover .sidebar-icon {
+    -fx-fill: #1E4620; /* Match button hover text */
+}
+.sidebar-button:focused .sidebar-icon {
+    -fx-fill: #1E4620; /* Match button focused text */
+}
+/* --- END NEW --- */
+
+
+/* --- Dashboard Header (Created in Java) --- */
+.header-title {
+    -fx-text-fill: #2C3E50; /* Dark Text */
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+.network-status-label {
+    -fx-text-fill: #27AE60; /* Success Green */
+    -fx-font-size: 12px;
+    -fx-padding: 5 10;
+    -fx-background-color: rgba(39, 174, 96, 0.1);
+    -fx-background-radius: 10;
+}
+.network-status-label-offline {
+    -fx-text-fill: #E74C3C; /* Warning Red */
+    -fx-font-size: 12px;
+    -fx-padding: 5 10;
+    -fx-background-color: rgba(231, 76, 60, 0.1);
+    -fx-background-radius: 10;
+}
+.clickable-card {
+    -fx-cursor: hand;
+}
+.clickable-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.0, 0, 3);
+}
+.clickable-card:hover .card-label,
+.clickable-card:hover .transaction-icon {
+    -fx-text-fill: #2C3E50;
+    -fx-fill: #2C3E50;
+}
+.clickable-card:hover .card-amount {
+    -fx-text-fill: #1E4620; /* Dark Green on hover */
+}
+
+/* --- Finquest Cards (Used by FXML) --- */
+.budget-card, .form-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 10, 0.0, 0, 4);
+}
+
+/* --- Section/Card Titles --- */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+/* --- Card Labels (Small text) --- */
+.card-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7F8C8D;
+    -fx-font-weight: normal;
+}
+
+/* --- Card Amounts (Large text) --- */
+.card-amount {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    -fx-spacing: 5;
+}
+.form-group-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #34495E;
+    -fx-font-weight: 500;
+}
+.form-group-field {
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #BDC3C7;
+    -fx-padding: 8;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #2C3E50;
+    -fx-prompt-text-fill: #B0B0B0;
+}
+.form-group-field:focused {
+    -fx-border-color: #2ECC71;
+    -fx-background-color: #F8FDF8;
+}
+.form-group-field .text {
+    -fx-fill: #2C3E50;
+}
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #2C3E50;
+}
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #F4F6F6;
+}
+
+
+/* --- Buttons --- */
+.add-button {
+    -fx-background-color: #2ECC71; /* New Bright Green */
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 15; /* Reduced padding */
+    -fx-font-size: 13px; /* Reduced font size */
+    -fx-cursor: hand;
+}
+.add-button:hover {
+    -fx-background-color: #27AE60; /* Darker Green */
+}
+/* Theme Toggles */
+.toggle-button {
+    -fx-background-color: #ECF0F1;
+    -fx-border-color: #BDC3C7;
+    -fx-text-fill: #34495E;
+    -fx-padding: 8 15;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+.toggle-button:hover {
+    -fx-background-color: #F4F6F6;
+}
+.toggle-button:selected {
+    -fx-background-color: #2ECC71;
+    -fx-border-color: #2ECC71;
+    -fx-text-fill: #FFFFFF;
+}
+
+
+/* --- Transaction Amount Colors --- */
+.transaction-amount-in {
+    -fx-text-fill: #27AE60; /* Darker Green for income */
+    -fx-font-weight: bold;
+}
+.transaction-amount-out {
+    -fx-text-fill: #E74C3C; /* Red */
+    -fx-font-weight: bold;
+}
+
+/*
+========================================
+  FINQUEST TableView Theme (Light)
+========================================
+*/
+.finquest-table-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-selection-bar: #2ECC71; /* Green selection */
+    -fx-selection-bar-text: white;
+}
+.finquest-table-view .column-header-background {
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: transparent transparent #E0E0E0 transparent;
+    -fx-background-radius: 12 12 0 0;
+}
+.finquest-table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-padding: 12;
+}
+.finquest-table-view .column-header .label {
+    -fx-text-fill: #34495E;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+.finquest-table-view .table-row-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent transparent #F1F1F1 transparent;
+    -fx-border-width: 1;
+}
+.finquest-table-view .table-row-cell:empty {
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 0;
+}
+.finquest-table-view .table-cell {
+    -fx-padding: 12 10;
+    -fx-border-color: transparent; /* Border is now on the row */
+    -fx-font-size: 14px;
+    -fx-text-fill: #2C3E50;
+}
+.finquest-table-view .table-row-cell:selected {
+     -fx-background-color: #2ECC71;
+}
+
+/*
+========================================
+  FINQUEST Chart Theme (Light)
+========================================
+*/
+.chart .chart-plot-background {
+    -fx-background-color: #ECF0F1;
+}
+.chart .text,
+.chart .axis-label,
+.chart .tick-label {
+    -fx-fill: #2C3E50;
+    -fx-font-family: "System";
+}
+.chart .legend {
+    -fx-background-color: #ECF0F1;
+}
+.chart .legend-item .text {
+    -fx-fill: #2C3E50;
+}
+.chart-pane-hole {
+    -fx-fill: #ECF0F1; /* Light background for donut hole */
+}
+
+/* Chart Data Colors */
+.chart .default-color0.chart-bar,
+.chart .default-color0.chart-pie { -fx-bar-fill: #2ECC71; -fx-pie-color: #2ECC71; } /* Bright Green */
+.chart .legend-item-symbol.default-color0 { -fx-background-color: #2ECC71; }
+.chart .default-color1.chart-bar,
+.chart .default-color1.chart-pie { -fx-bar-fill: #E74C3C; -fx-pie-color: #E74C3C; } /* Red */
+.chart .legend-item-symbol.default-color1 { -fx-background-color: #E74C3C; }
+.chart .default-color2.chart-bar,
+.chart .default-color2.chart-pie { -fx-bar-fill: #3498DB; -fx-pie-color: #3498DB; } /* Blue */
+.chart .legend-item-symbol.default-color2 { -fx-background-color: #3498DB; }
+.chart .default-color3.chart-bar,
+.chart .default-color3.chart-pie { -fx-bar-fill: #F1C40F; -fx-pie-color: #F1C40F; } /* Yellow */
+.chart .legend-item-symbol.default-color3 { -fx-background-color: #F1C40F; }
+.chart .default-color4.chart-bar,
+.chart .default-color4.chart-pie { -fx-bar-fill: #9B59B6; -fx-pie-color: #9B59B6; } /* Purple */
+.chart .legend-item-symbol.default-color4 { -fx-background-color: #9B59B6; }
+
+/*
+========================================
+  FINQUEST Transaction History List (Card Style - Light)
+========================================
+*/
+.transaction-history-view {
+    -fx-background-color: #ECF0F1; /* The main app's gray background */
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+.transaction-history-view.budget-card {
+     -fx-background-color: #FFFFFF;
+     -fx-background-radius: 12px;
+     -fx-padding: 10px;
+     -fx-border-color: transparent;
+}
+.transaction-history-view.transactions-tab-list-view {
+    -fx-background-color: #ECF0F1;
+    -fx-background-radius: 12px;
+    -fx-padding: 10px;
+    -fx-border-color: #BDC3C7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+}
+.transaction-history-view .list-cell {
+    -fx-background-color: transparent; /* Makes the cell transparent */
+    -fx-padding: 8px 15px; /* Spacing between cards */
+    -fx-border-width: 0;
+}
+.transaction-list-card {
+    -fx-background-color: #FFFFFF; /* White card background */
+    -fx-background-radius: 12;
+    -fx-padding: 20px 25px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 10, 0.0, 0, 4);
+}
+.transaction-history-view .list-cell:filled:selected,
+.transaction-history-view .list-cell:filled:focused {
+    -fx-background-color: transparent;
+}
+.transaction-history-view .list-cell:filled:selected .transaction-list-card {
+    -fx-effect: dropshadow(gaussian, #27AE60, 15, 0.3, 0, 0); /* Green glow on select */
+    -fx-background-color: #F0FFF0; /* Very light green background on select */
+}
+/* Fix for light mode text turning white on select */
+.transaction-history-view .list-cell:filled:selected .transaction-title,
+.transaction-history-view .list-cell:filled:selected .transaction-date,
+.transaction-history-view .list-cell:filled:selected .transaction-amount-in,
+.transaction-history-view .list-cell:filled:selected .transaction-amount-out,
+.transaction-history-view .list-cell:filled:selected .transaction-icon {
+     -fx-text-fill: #2C3E50; /* Keep text dark on select */
+     -fx-fill: #2C3E50;
+}
+
+/*
+========================================
+  FINQUEST List Cell Content Styles (Light)
+========================================
+*/
+.transaction-icon {
+    -fx-font-size: 24px;
+    -fx-fill: #2C3E50; /* Use -fx-fill for icons */
+    -fx-text-fill: #2C3E50; /* Use -fx-text-fill for emojis */
+    -fx-padding: 5 0 0 0;
+}
+.transaction-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-fill: #2C3E50;
+}
+.transaction-date {
+    -fx-font-size: 13px;
+    -fx-fill: #7F8C8D;
+}
+.transaction-history-view .transaction-amount-in {
+    -fx-font-size: 16px;
+}
+.transaction-history-view .transaction-amount-out {
+    -fx-font-size: 16px;
+}
+
+/*
+========================================
+  SCROLL BAR STYLES (Light)
+========================================
+*/
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-pane .scroll-bar:vertical .increment-button ,
+.scroll-pane .scroll-bar:vertical .decrement-button ,
+.scroll-pane .scroll-bar:horizontal .increment-button ,
+.scroll-pane .scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+.list-view .scroll-bar:vertical .thumb,
+.list-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: #BDC3C7;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+.list-view .scroll-bar:vertical .track,
+.list-view .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+
+
+.empty-list-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7F8C8D; /* Muted Gray */
+    -fx-font-weight: bold;
+}

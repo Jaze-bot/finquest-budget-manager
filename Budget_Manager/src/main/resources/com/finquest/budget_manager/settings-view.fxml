@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.finquest.budget_manager.SettingsController"
+      spacing="20" style="-fx-padding: 25;"
+      styleClass="main-view">
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="⚙️ Settings" styleClass="header-title" />
+        <HBox HBox.hgrow="ALWAYS" alignment="CENTER_LEFT" style="-fx-padding: 0 0 0 10;">
+            <Label fx:id="statusLabel" text=" "
+                   style="-fx-font-size: 12px; -fx-padding: 5 8; -fx-background-radius: 10;" />
+        </HBox>
+    </HBox>
+
+    <GridPane hgap="20" vgap="20">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="50.0" />
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+
+        <VBox styleClass="budget-card" spacing="15" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label text="🎯 Monthly Budget" styleClass="section-title" />
+            <Label text="Set your total spending limit for the month. This updates the 'Left to Spend' budget on your dashboard."
+                   wrapText="true" styleClass="card-label" />
+            <VBox styleClass="form-group" spacing="5">
+                <Label text="Budget Amount:" styleClass="form-group-label" />
+                <TextField fx:id="monthlyBudgetField" promptText="e.g., 2000.00" styleClass="form-group-field" />
+            </VBox>
+        </VBox>
+
+        <VBox styleClass="budget-card" spacing="15" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <Label text="💵 Default Currency" styleClass="section-title" />
+            <Label text="Choose your primary currency. This will update all monetary values across the application."
+                   wrapText="true" styleClass="card-label" />
+            <VBox styleClass="form-group" spacing="5">
+                <Label text="Select Currency:" styleClass="form-group-label" />
+                <ComboBox fx:id="currencyComboBox" promptText="Select currency" styleClass="form-group-field"
+                          maxWidth="Infinity" />
+            </VBox>
+        </VBox>
+
+        <VBox styleClass="budget-card" spacing="15" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <Label text="🎨 Appearance" styleClass="section-title" />
+            <Label text="Select your preferred application theme." wrapText="true" styleClass="card-label" />
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <ToggleButton fx:id="lightThemeButton" text="☀️ Light" />
+                <ToggleButton fx:id="darkThemeButton" text="🌙 Dark" />
+            </HBox>
+        </VBox>
+
+        <VBox GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    </GridPane>
+
+    <VBox VBox.vgrow="ALWAYS" />
+
+    <HBox alignment="BOTTOM_RIGHT">
+        <Button fx:id="saveButton" text="Save Settings" styleClass="add-button" onAction="#handleSave" />
+    </HBox>
+
+</VBox>

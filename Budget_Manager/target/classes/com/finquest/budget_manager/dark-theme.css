@@ -1,0 +1,244 @@
+//Chiong
+
+/*
+========================================
+  FINQUEST DARK THEME OVERRIDES
+========================================
+*/
+
+/* --- Base Colors (Global Background) --- */
+.root, .main-view {
+    -fx-background-color: #1A1A1A; /* Very Dark Gray */
+}
+
+/* ========================================
+  NEW Dark Sidebar
+========================================
+*/
+.sidebar {
+    -fx-background-color: #2C2C2C; /* Dark card color */
+    -fx-border-color: transparent #3C3C3C transparent transparent;
+}
+.sidebar-title {
+    -fx-text-fill: #2ECC71; /* Bright Green Accent */
+}
+.sidebar-subtitle {
+    -fx-text-fill: #A0A0A0; /* Muted light text */
+}
+.sidebar-button {
+    -fx-text-fill: #A0A0A0; /* Muted light text */
+}
+.sidebar-button:hover {
+    -fx-background-color: #3C3C3C; /* Darker hover */
+    -fx-text-fill: #FFFFFF;
+}
+.sidebar-button:focused {
+    -fx-background-color: #3C3C3C;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: transparent transparent transparent #2ECC71; /* Bright green accent border */
+}
+
+/* --- NEW: Style for the sidebar icons (Dark) --- */
+.sidebar-icon {
+    -fx-fill: #A0A0A0; /* Match button text */
+}
+.sidebar-button:hover .sidebar-icon,
+.sidebar-button:focused .sidebar-icon {
+    -fx-fill: #FFFFFF; /* Match button hover/focused text */
+}
+/* --- END NEW --- */
+
+
+/* --- Dashboard Header (Overrides) --- */
+.header-title {
+    -fx-text-fill: #F0F0F0; /* Light text */
+}
+
+/* --- Finquest Cards (Overrides) --- */
+.budget-card, .form-card {
+    -fx-background-color: #222222; /* Darker card color */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.0, 0, 4); /* Stronger shadow */
+}
+
+/* --- Text Colors (Overrides) --- */
+.section-title,
+.card-amount,
+.transaction-title,
+.chart .text,
+.chart .axis-label,
+.chart .tick-label {
+    -fx-text-fill: #F0F0F0; /* Light text for dark backgrounds */
+    -fx-fill: #F0F0F0;
+}
+.card-label,
+.form-group-label,
+.transaction-date {
+    -fx-text-fill: #A0A0A0; /* Muted light text */
+}
+/* Fix for dark mode hover text */
+.clickable-card:hover .card-label,
+.clickable-card:hover .transaction-icon,
+.clickable-card:hover .card-amount {
+    -fx-text-fill: #FFFFFF;
+    -fx-fill: #FFFFFF;
+}
+
+
+
+.finquest-table-view {
+    -fx-background-color: #222222; /* Darker card color */
+    -fx-border-color: #444444;
+    -fx-selection-bar: #2ECC71;
+    -fx-selection-bar-text: #1A1A1A; /* Dark text on green selection */
+}
+.finquest-table-view .column-header-background {
+    -fx-background-color: #3C3C3C;
+    -fx-border-color: transparent transparent #555555 transparent;
+}
+.finquest-table-view .column-header .label {
+    -fx-text-fill: #F0F0F0; /* Light text */
+}
+.finquest-table-view .table-row-cell {
+    -fx-background-color: #222222; /* Dark background for rows */
+    -fx-border-color: transparent transparent #444444 transparent;
+    -fx-border-width: 1;
+}
+.finquest-table-view .table-row-cell:empty {
+    -fx-background-color: #222222;
+    -fx-border-width: 0;
+}
+.finquest-table-view .table-cell {
+    -fx-padding: 12 10;
+    -fx-border-color: transparent; /* Border is now on the row */
+    -fx-font-size: 14px;
+    -fx-text-fill: #F0F0F0; /* Light text */
+}
+.finquest-table-view .table-row-cell:selected {
+     -fx-background-color: #2ECC71;
+}
+.finquest-table-view .table-row-cell:selected .table-cell {
+    -fx-text-fill: #1A1A1A; /* Dark text on green selection */
+}
+
+
+.transaction-history-view {
+    -fx-background-color: #1A1A1A; /* Dark app background */
+    -fx-border-color: #444444;
+}
+.transaction-history-view.list-view {
+    -fx-background-color: #222222; /* Darker card color */
+    -fx-border-color: #444444;
+}
+.transactions-tab-list-view {
+    -fx-background-color: #1A1A1A;
+    -fx-border-color: #444444;
+}
+.transaction-history-view .list-cell {
+    -fx-background-color: transparent;
+}
+.transaction-list-card {
+    -fx-background-color: #222222; /* Darker card color */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.0, 0, 4);
+}
+.transaction-icon {
+    -fx-fill: #F0F0F0; /* Make icons light */
+    -fx-text-fill: #F0F0F0; /* Make emojis light */
+}
+.transaction-title {
+    -fx-fill: #F0F0F0;
+}
+.transaction-date {
+    -fx-fill: #A0A0A0;
+}
+
+.transaction-history-view .list-cell:filled:selected .transaction-title,
+.transaction-history-view .list-cell:filled:selected .transaction-date,
+.transaction-history-view .list-cell:filled:selected .transaction-amount-in,
+.transaction-history-view .list-cell:filled:selected .transaction-amount-out,
+.transaction-history-view .list-cell:filled:selected .transaction-icon {
+     -fx-text-fill: #FFFFFF; /* Keep text light on select */
+     -fx-fill: #FFFFFF;
+}
+.transaction-history-view .list-cell:filled:selected .transaction-list-card {
+    -fx-background-color: #27AE60; /* Green background on select */
+    -fx-effect: dropshadow(gaussian, #2ECC71, 15, 0.3, 0, 0);
+}
+
+
+
+.chart .chart-plot-background {
+    -fx-background-color: #222222; /* Darker card color */
+}
+.chart .legend {
+    -fx-background-color: #222222; /* Darker card color */
+}
+.chart .legend-item .text {
+    -fx-fill: #F0F0F0;
+}
+.chart-pane-hole {
+    -fx-fill: #1A1A1A; /* Dark background for donut hole */
+}
+
+
+.form-group-field {
+    -fx-background-color: #3C3C3C;
+    -fx-border-color: #555555;
+    -fx-text-fill: #F0F0F0;
+    -fx-prompt-text-fill: #A0A0A0;
+}
+.form-group-field:focused {
+    -fx-border-color: #2ECC71;
+    -fx-background-color: #4C4C4C;
+}
+.form-group-field .text {
+    -fx-fill: #F0F0F0;
+}
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: #3C3C3C;
+    -fx-text-fill: #F0F0F0;
+}
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #555555;
+}
+
+/* Theme Toggles (Dark) */
+.toggle-button {
+    -fx-background-color: #2C2C2C;
+    -fx-border-color: #555555;
+    -fx-text-fill: #F0F0F0;
+}
+.toggle-button:hover {
+    -fx-background-color: #3C3C3C;
+}
+.toggle-button:selected {
+    -fx-background-color: #2ECC71;
+    -fx-border-color: #2ECC71;
+    -fx-text-fill: #FFFFFF;
+}
+
+
+.scroll-pane .scroll-bar:vertical .thumb,
+.scroll-pane .scroll-bar:horizontal .thumb,
+.list-view .scroll-bar:vertical .thumb,
+.list-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: #555555; /* Darker thumb for dark theme */
+}
+.list-view .scroll-bar:vertical .track,
+.list-view .scroll-bar:horizontal .track {
+    -fx-background-color: transparent; /* Keep track transparent */
+}
+
+
+.empty-list-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #A0A0A0; /* Muted light text */
+    -fx-font-weight: bold;
+}
+
+
+.transaction-amount-in {
+    -fx-text-fill: #2ECC71; /* Bright Green */
+}
+.transaction-amount-out {
+    -fx-text-fill: #FF5252; /* Brighter Red */
+}
